@@ -16,6 +16,7 @@ It also saves a CSV snapshot of parameters locally, updating on each run so you 
 
 ## Project Structure
 binance-parameters-monitor/
+
 ├── README.md               # Project documentation  
 ├── binance_monitor.py      # Main script
 
