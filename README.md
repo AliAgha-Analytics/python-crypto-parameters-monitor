@@ -31,4 +31,12 @@ Replace placeholders in the script:
 TELEGRAM_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 CHAT_ID = "YOUR_CHAT_ID"
 
+## Notes on Real-World Usage
+- **API Keys**: In production, store sensitive values (Telegram tokens, Binance API keys) in environment variables or a `.env` file. Never commit them to GitHub.
+- **Regional Differences**: Public endpoints return global defaults. For real trading, authenticated API calls reflect your account’s actual limits, which may vary by region, regulation or VIP tier etc..
+- **CSV Snapshots**: The script overwrites `binance_snapshot.csv` each run. If you want historical tracking, archive snapshots manually or extend the script to timestamp files.
+- **Error Handling**: You can add retry logic and exception handling for API downtime or rate limits.
+- **Deployment**: For continuous monitoring, deploy on a cloud service (PythonAnywhere, Heroku, VPS) instead of running locally.
+- **Extensibility**: The design can be extended to multiple exchanges for cross-exchange monitoring.
+
 
